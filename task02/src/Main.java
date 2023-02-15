@@ -1,13 +1,19 @@
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.*;
+import java.nio.Buffer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Base64;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,6 +47,10 @@ public class Main {
         String htmlContent = Files.readString(Paths.get("homework/index.html"));
         String cssContent = Files.readString(Paths.get("homework/css/forms.css"));
         htmlContent = htmlContent.replaceFirst("<head>", "<head><style>" + cssContent + "</style>");
+
+        byte[] imageBytes = Files.readAllBytes(Paths.get("homework/images/1.jpg"));
+        String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+        htmlContent.replaceFirst("<img src=\"/images/1.jpg\" alt=\"coins\" style=\"display:block; width: 200px; height: 200px;\">", "<body><img src=\"data:image/png;base64," + base64Image + "\">");
         try {
             exchange.getResponseHeaders().add("Content-Type", "text/html");
             int responseCode = 200;
@@ -51,21 +61,11 @@ public class Main {
                 writer.flush();
             }
         } catch (IOException e) {
+            System.out.println("ERROR 404");
             e.printStackTrace();
         }
     }
 
-    public static String readHtml() {
-        String html = "";
-        try{
-            Path path = Paths.get("homework/index.html");
-            html = Files.readString(path);
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-        return html;
-    }
     private static void handleProfileRequest(HttpExchange exchange) {
         try {
             exchange.getResponseHeaders().add("Content-Type", "text/plain; charset=utf-8");

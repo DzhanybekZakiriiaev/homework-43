@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50aae7f3-11c8-475d-88bb-c5a492abd465" name="Changes" comment="task02 is almost done">
+    <list default="true" id="50aae7f3-11c8-475d-88bb-c5a492abd465" name="Changes" comment="task02 is almost completely done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task02/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/task02/src/Main.java" afterDir="false" />
     </list>
@@ -60,13 +60,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676475857283</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="task02 is almost completely done">
+      <created>1676479914719</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676479914719</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="created project. task 01 is done" />
     <MESSAGE value="task02 is almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="task02 is almost done" />
+    <MESSAGE value="task02 is almost completely done" />
+    <option name="LAST_COMMIT_MESSAGE" value="task02 is almost completely done" />
   </component>
 </project>
