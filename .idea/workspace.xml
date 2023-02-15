@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50aae7f3-11c8-475d-88bb-c5a492abd465" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework-43.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/another_folder/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/another_folder/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/bg/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task01/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task01/task01.iml" afterDir="false" />
+    <list default="true" id="50aae7f3-11c8-475d-88bb-c5a492abd465" name="Changes" comment="created project. task 01 is done">
+      <change afterPath="$PROJECT_DIR$/task02/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +34,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-19"
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "last_opened_file_path": "C:/Users/user/Documents/JAVA/lesson-25"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,9 +47,19 @@
       <option name="presentableId" value="Default" />
       <updated>1676457244230</updated>
     </task>
+    <task id="LOCAL-00001" summary="created project. task 01 is done">
+      <created>1676459329678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676459329678</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="created project. task 01 is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="created project. task 01 is done" />
   </component>
 </project>
