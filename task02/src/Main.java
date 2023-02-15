@@ -1,19 +1,16 @@
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
-
 import java.io.*;
-import java.net.InetSocketAddress;
-import java.net.URI;
+import java.net.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         try {
             HttpServer server = makeServer();
             server.start();
@@ -25,27 +22,32 @@ public class Main {
 
     private static HttpServer makeServer() throws IOException {
         String host = "localhost";
-        InetSocketAddress address = new InetSocketAddress(host, 9880);
+        InetSocketAddress address = new InetSocketAddress(host, 9881);
         String msg = "запускаем сервер по адресу" + " http://%s:%s/%n";
         System.out.printf(msg, address.getHostName(), address.getPort());
         HttpServer server = HttpServer.create(address, 50);
-        System.out.println("удачно!");   return server;
+        System.out.println("удачно!");
+        return server;
     }
 
     private static void initRoutes(HttpServer server) {
         server.createContext("/", Main::handleRootRequest);
         server.createContext("/apps/", Main::handleAppRequest);
-        server.createContext("/apps/profile",Main::handleProfileRequest);
-        server.createContext("/index.html",Main::handleHtmlRequest);
+        server.createContext("/apps/profile", Main::handleProfileRequest);
+        server.createContext("/index.html", Main::handleHtmlRequest);
     }
-    private static void handleHtmlRequest(HttpExchange exchange) {
+
+    private static void handleHtmlRequest(HttpExchange exchange) throws IOException {
+        String htmlContent = Files.readString(Paths.get("homework/index.html"));
+        String cssContent = Files.readString(Paths.get("homework/css/forms.css"));
+        htmlContent = htmlContent.replaceFirst("<head>", "<head><style>" + cssContent + "</style>");
         try {
             exchange.getResponseHeaders().add("Content-Type", "text/html");
             int responseCode = 200;
             int length = 0;
             exchange.sendResponseHeaders(responseCode, length);
             try (PrintWriter writer = getWriterFrom(exchange)) {
-                write(writer, "", readHtml());
+                write(writer, "", htmlContent);
                 writer.flush();
             }
         } catch (IOException e) {
